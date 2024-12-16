@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+
+        <!-- 자바스크립트 공간-->
+        <script type="text/javascript">
+
+            {/* 함수(function) */}
+            /**********************************
+             * return: 함수의 종료 및 뒤에 위치한 값을 반환 
+            **********************************/
+
+            /* {함수 출력} */
+            function get_member1() {
+                return "상이";
+            }
+            
+            function get_member2() {
+                return "상2";
+            }
+
+            console.log(get_member1()); // 결과: 상이
+            console.log(get_member2()); // 결과: 상2
+
+            /* {다중 return} */
+            function get_members() {
+                return "상이";
+                return "상2";
+                return "상ol";
+            }
+            console.log(get_members()); // 결과: 상이
+
+        </script>
+    </body>
+</html>
