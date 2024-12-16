@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+
+        <!-- 자바스크립트 공간-->
+        <script type="text/javascript">
+
+            {/* 조건문 */}
+            /**********************************
+             * 
+            **********************************/
+
+            /* {0 & 1} */
+            if(1) {
+                console.log(1);
+            } // 결과: 1
+
+            if(0) {
+                console.log(0);
+            } // 미작동
+
+            /* {""} */
+            if("") {
+                console.log("");
+            } // 미작동
+
+            if(" ") {
+                console.log("공백");
+            } // 결과: 공백
+
+            /* {undefiend} */
+            if(undefined) {
+                console.log("undefiend");
+            } // 미작동
+
+            if(!undefined) {
+                console.log("!undefiend");
+            } // 결과: !undefiend
+
+            /* {null} */
+            if(null) {
+                console.log("null");
+            } // 미작동
+
+            if(!null) {
+                console.log("!null");
+            } // 결과: !null
+
+            /* {NaN} */
+            if(NaN) {
+                console.log("NaN");
+            } // 미작동
+
+            if(!NaN) {
+                console.log("!NaN");
+            } // 결과: !NaN
+
+            /* {변수} */
+            var a;
+
+            if(a) {
+                console.log(a);
+            } // 미작동
+
+            if(!a) {
+                console.log(!a);
+            } // 결과: true
+        
+        </script>
+    </body>
+</html>
