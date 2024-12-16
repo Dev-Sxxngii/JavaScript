@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+
+        <!-- 자바스크립트 공간-->
+        <script type="text/javascript">
+
+            {/* 연산자 */}
+            /**********************************
+             * 동등 연산자: 좌항과 우항의 값이 같다면 True / 틀리면 False 반환
+             * 일치 연산자: 좌항과 우항의 값이 같고 데이터 타입이 같다면 True / 틀리면 False 반환
+            **********************************/
+
+            /* {동등 연산자} */
+            console.log(1==1); // True
+            console.log(1==2); // false
+            console.log("One"=="One"); // True
+            console.log("One"=="Two"); // false
+
+            console.log(typeof "One"=="One"); // 결과: false | typeof를 string 처리를 하는것인지 알아보자!
+            console.log(typeof "One"==typeof "One"); // 결과: false | typeof를 string 처리를 하는것인지 알아보자!
+            console.log(typeof("One"=="One")); // 결과: boolean
+            console.log(typeof true); // 결과: boolean
+
+            /* {일치 연산자} */
+            console.log(1===1); // 결과: true
+            console.log(1===2); // 결과: false  
+            console.log(1=='1'); // 결과: true | 연산자 설명 읽어보기
+            console.log(1==='1'); // 결과: false 
+
+            console.log(typeof(1==1) === typeof(1==1)); // 결과: true
+            console.log(typeof(1===1)); // 결과: boolean
+
+        </script>
+    </body>
+</html>
