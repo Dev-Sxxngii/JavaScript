@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+
+        <!-- 자바스크립트 공간-->
+        <script type="text/javascript">
+
+            {/* 배열(array) */}
+            /**********************************
+             * shift: 배열명.shift();
+             * pop: 배열명.pop();
+             * sort: 배열명.sort();
+             * reverse: 배열명.reverse();
+             * 정렬: 기본 함수 사용 시 자바스크립트가 정의한 문자의 우선순위를 기준으로 진행함(사용자 정의 가능)
+            **********************************/            
+
+            /* {shift} */
+            var shift = ["1", "a", "b", "c", "d"];
+            shift.shift();
+            console.log(shift); // 결과: (4) ['a', 'b', 'c'. 'd']
+
+            /* {pop} */
+            var pop = ["a", "b", "c", "d", "e"];
+            pop.pop();
+            console.log(pop); // 결과: (4) ['a', 'b', 'c'. 'd']
+
+            /* {sort} */
+            var sort = ["d", "c", "b", "a"];
+            sort.sort();
+            console.log(sort); // 결과: (4) ['a', 'b', 'c'. 'd']
+
+            /* {reverse} */
+            var reverse = ["a", "b", "c", "d"];
+            reverse.reverse();
+            console.log(reverse) // 결과: (4) ['d'. 'c'. 'b', 'a']
+
+        </script>
+    </body>
+</html>
