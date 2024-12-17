@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+
+        <!-- 자바스크립트 공간-->
+        <script type="text/javascript">
+
+            {/* 배열(array) */}
+            /**********************************
+             * push: 배열명.push(인자)
+             * concat: 배열명 = 배열명.concat(배열[인자, 인자, ...])
+             * unshift: 배열명.unshift(인자)
+             * splice: 배열명.splice(인덱스, 삭제한 원소 수, 추가할 인자)
+            **********************************/            
+
+            /* {push} */
+            var push = ["a", "b", "c"];
+            push.push("d");
+            // push = push.push("d") // 결과: 4 | push에 추가한 값을 다시 저장해야 한다 생각했는데 아닌 이유가 뭐지?
+            console.log(push) // 결과: (4) ['a', 'b', 'c'. 'd']
+
+            /* {concat} */
+            var concat = ["a", "b"];
+            concat = concat.concat(["c", "d"]);
+            // concat.concat(["c", "d"]) // 이번에는 결과를 저장해야하네..?
+            console.log(concat); // 결과: (4) ['a', 'b', 'c'. 'd']
+
+            /* {unshift} */
+            var unshift = ["b", "c", "d"];
+            unshift.unshift("a"); // 결과: (4) ['a', 'b', 'c'. 'd']
+            // unshift = unshift.unshift("a"); // push와 같은 현상
+            console.log(unshift);
+
+            /* {splice} */
+            var splice = ["a", "d"];
+            splice.splice(1, 0, "b", "c");
+            // splice = splice.splice(1, 0, "b", "c"); // push와 같은 현상
+            console.log(splice); // 결과: (4) ['a', 'b', 'c'. 'd']
+
+            var splice_remove = ["a", "f"];
+            splice_remove.splice(1, 1, "b", "c", "d"); 
+            console.log(splice_remove); // 결과: (4) ['a', 'b', 'c'. 'd']
+
+        </script>
+    </body>
+</html>
