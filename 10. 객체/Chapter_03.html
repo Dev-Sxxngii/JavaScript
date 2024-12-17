@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+
+        <!-- 자바스크립트 공간-->
+        <script type="text/javascript">
+
+            {/* 객체(Object) */}
+            /**********************************
+             * this: 함수를 포함하고 있는 부모 함수 자신을 뜻한다.(파이썬: self)
+            **********************************/            
+
+            /* {객체지향} */
+            // var grades = {
+            //     'list' : {'상이':100, '상2':90, '상ol':80},
+            //     'show' : function() {
+            //         for(var key in grades.list) {
+            //             document.write(key + ": " + grades.list[key] + "<br />");
+            //         }
+            //     },
+            // }
+            // console.log(grades['list']) // 결과: {상이:100, 상2: 90, 상ol: 80}
+            // console.log(grades.list); // 결과: {상이:100, 상2: 90, 상ol: 80}
+            // console.log(grades['list']['상이']) // 결과: 100
+            // console.log(grades.list.상이) // 결과: 100
+            
+            // grades['show']()
+            // grades.show();
+
+            /* {this} */
+            var grades = {
+                'list' : {'상이':100, '상2':90, '상ol':80},
+                'show' : function() {
+                    for(var key in this.list) {
+                        document.write(key + ": " + this.list[key] + "<br />");
+                    }
+                },
+            }
+
+            grades.show();
+            grades['show']();
+
+        </script>
+    </body>
+</html>
