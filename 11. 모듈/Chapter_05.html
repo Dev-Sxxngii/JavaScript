@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+
+        <!-- 자바스크립트 공간-->
+        <script type="text/javascript" src="Chapter_05.js"></script>
+
+    </head>
+    <body>
+
+        <ul id="list">
+            <li>empty</li>
+            <li>empty</li>
+            <li>empty</li>
+            <li>empty</li>
+        </ul>
+
+        <input type="button" value="execute" id="execute_btn"/>
+
+        <!-- 자바스크립트 공간-->
+        <script type="text/javascript">
+
+            {/* 모듈(module) */}
+            /**********************************
+             * 모듈: 작은 단위의 로직
+             * 라이브러리: 자주 사용하는 로직을 잘 정리하고 모아놓은 코드의 집합
+            **********************************/   
+
+            // $('#list li').text('coding everybody');
+            $('#execute_btn').click(function() {
+                $('#list li').text('coding everybody');
+            })
+            
+        </script>
+
+    </body>
+</html>
