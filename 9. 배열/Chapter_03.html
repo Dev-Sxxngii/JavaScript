@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+
+        <!-- 자바스크립트 공간-->
+        <script type="text/javascript">
+
+            {/* 배열(array) */}
+            /**********************************
+             * .lenght: 길이를 구하는 함수(공백포함)
+            **********************************/            
+
+            /* {length} */
+            var hello = "안녕하세요";
+            console.log(hello.length); // 결과: 5
+
+            var bye = " 안녕히계세요 ";
+            console.log(bye.length); // 결과: 8
+
+            var trip = ["배낭", "매고", "여행", "이나", "갈까"];
+            console.log(trip.length); // 결과: 5
+
+            /* {toUpperCase} */
+            var home = "home"
+            document.write(home.toUpperCase() + "<br />"); // 결과: HOME
+
+            /* {toLowerCase} */
+            var SWEET = "SWEET"
+            document.write(SWEET.toLowerCase() + "<br />"); // 결과: sweet
+
+
+            /* {배열 사용} */
+            function get_members() {
+                return ["상이", "상2", "상ol"];
+            }
+
+            var member = get_members();
+
+            for(var i = 0; i < member.length; i++) {
+                console.log(member[i])
+            } // get_members만큼 반환환
+            
+        </script>
+    </body>
+</html>
