@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <ul>
+
+            <!-- 자바스크립트 공간-->
+            <script type="text/javascript">
+
+            {/* 객체(Object) */}
+            /**********************************
+             * 객체: 순서가 없다.
+            **********************************/            
+
+            /* {in} */
+            var grades = {'상이':100, '상2':90, '상ol':80};
+            var trip = ['배낭', '매고', '여행', '이나', '갈까'];
+
+            for(key in grades) {
+                document.write("<li>" + key + ": " + grades[key] + "</li>")
+            }
+
+            document.write("<br />")
+
+            for(key in trip) {
+                document.write("<li>" + key + ": " + trip[key] + "</li>")
+            }
+
+            </script>
+
+        </ul>
+    </body>
+</html>
