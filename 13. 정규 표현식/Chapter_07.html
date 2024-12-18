@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>정규 표현식 Chapter 07</title>
+    </head>
+    <body>
+
+        <!-- 자바스크립트 공간-->
+        <script type="text/javascript">
+
+            {/* 정규 표현식 */}
+            /**********************************
+             * \/\/: //(슬래쉬)
+             * \b: 일치하는 경계를 찾는 기능 | 현재 코드 기준 url 양식을 찾으야한다.
+             * \?: 캡쳐 비활성화(그룹화 방지) | https가 온전한데 만약 그룹화되어 ht tps로 변환되는 상황 방지
+             * https?: https
+             * \m: 줄바꿈 검색 | 대부분 각 줄 별로 읽게 만들어져 여러 줄을 읽을 경우 \m을 사용
+             *  *: 앞에 입력된 문자 판별 | 아마 url의 정규표현식이 부합되는 경우에만 진행되는 예외 코드 아닐까 하는 생각을 해봅니다..!
+            **********************************/          
+           
+            /* {정규 표현식} */
+            var urlPattern = /\b(?:https?):\/\/[a-z0-9-+&@#\/%?=~_|!:,.;]*/gim;
+            var content = '생활코딩 : http://opentutorials.org/course/1 입니다. 네이버 : http://naver.com 입니다. ';
+            var result = content.replace(urlPattern, function(url){
+            return '<a href="'+url+'">'+url+'</a>';
+            });
+            console.log(result);
+
+        </script>
+        
+    </body>
+</html>
