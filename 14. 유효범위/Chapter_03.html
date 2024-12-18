@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>유효범위 Chapter 03</title>
+    </head>
+    <body>
+
+        <!-- 자바스크립트 공간-->
+        <script type="text/javascript">
+
+            {/* 유효범위(Scope) */}
+            /**********************************
+             * 
+            **********************************/            
+
+            /* {전역변수} */
+            // var MYAPP = {} // 전역 변수
+            // MYAPP.calculator = { // MYAPP 속 전역 변수
+            //     'left' : null, // MYAPP.calculator 속 전역 변수 | 초기화
+            //     'right' : null // MYAPP.calculator 속 전역 변수 | 초기화
+            // }
+            // MYAPP.coordinate = { // MYAPP 속 전역 변수
+            //     'left' : null, // MYAPP.calculator 속 전역 변수 | 초기화
+            //     'rigth' : null // MYAPP.calculator 속 전역 변수 | 초기화
+            // }
+            // MYAPP.calculator.left = 10;
+            // MYAPP.calculator.right = 20;
+            // function sum() {
+            //     return MYAPP.calculator.left + MYAPP.calculator.right;
+            // }
+            // document.write(sum()); // 결과: 30
+
+            /* {전역변수} */
+            // (function() { // 하나의 전역 변수도 원하지 않는 경우
+            //     var MYAPP = {} // 익명 함수 속 지역 변수
+            //     MYAPP.calculator = { // MYAPP 속 지역 변수 
+            //         'left' : null, // MYAPP.calculator 속 지역 변수 | 초기화
+            //         'right' : null // MYAPP.calculator 속 지역 변수 | 초기화
+            //     }
+            //     MYAPP.coordinate = { // MYAPP 속 지역 변수
+            //         'left' : null, // MYAPP.calculator 속 지역 변수 | 초기화
+            //         'rigth' : null // MYAPP.calculator 속 지역 변수 | 초기화
+            //     }
+            //     MYAPP.calculator.left = 10;
+            //     MYAPP.calculator.right = 20;
+            //     function sum() {
+            //         return MYAPP.calculator.left + MYAPP.calculator.right;
+            //     }
+            //     document.write(sum()); // 결과: 30
+            // }())
+
+            // function MYAPP() { // 전역 변수
+            //     var MYAPP = {} // MYAPP 함수 속 지역 변수
+            //     MYAPP.calculator = { // MYAPP 속 지역 변수 
+            //         'left' : null, // MYAPP.calculator 속 지역 변수 | 초기화
+            //         'right' : null // MYAPP.calculator 속 지역 변수 | 초기화
+            //     }
+            //     MYAPP.coordinate = { // MYAPP 속 지역 변수
+            //         'left' : null, // MYAPP.calculator 속 지역 변수 | 초기화
+            //         'rigth' : null // MYAPP.calculator 속 지역 변수 | 초기화
+            //     }
+            //     MYAPP.calculator.left = 10;
+            //     MYAPP.calculator.right = 20;
+            //     function sum() {
+            //         return MYAPP.calculator.left + MYAPP.calculator.right;
+            //     }
+            //     document.write(sum()); // 결과: 30
+            // }
+            // MYAPP();
+
+        </script>
+        
+    </body>
+</html>
