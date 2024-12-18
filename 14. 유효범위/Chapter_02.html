@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>유효범위 Chapter 02</title>
+    </head>
+    <body>
+
+        <!-- 자바스크립트 공간-->
+        <script type="text/javascript">
+
+            {/* 유효범위(Scope) */}
+            /**********************************
+             * 
+            **********************************/            
+
+            /* {유효범위 효용} */
+            // function a () {
+            //     var i = 0; // 전역 변수
+            // }
+            // for(var i = 0; i < 5; i++) { // 전역 변수
+            //     a(); // 지역 변수
+            //     document.write(i); 
+            // } // 결과: 01234
+
+            // function a () {
+            //     i = 0;
+            // }
+            // for(var i = 0; i < 5; i++) { // 전역 변수
+            //     a(); // 지역 변수
+            //     document.write(i); 
+            // } // 결과: 0으로 계속 초기화되어 무한 로딩
+
+            // for(var i = 0; i < 5; i++) { // 전역 변수
+            //     console.log(i); 
+            // } // 결과: 0, 1, 2, 3, 4
+            // console.log(i); // 결과: 5 | C와 다르게 for문 안의 변수도 지역 변수가 아닌가보네..?
+
+        </script>
+        
+    </body>
+</html>
