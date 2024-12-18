@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>정규 표현식 Chapter 03</title>
+    </head>
+    <body>
+
+        <!-- 자바스크립트 공간-->
+        <script type="text/javascript">
+
+            {/* 정규 표현식 */}
+            /**********************************
+             * match: 정규 표현식을 통해 결과를 배열로 반환하는 함수 (배열, null)
+             * replace: 정규 표현식을 통해 문자를 치환하는 함수
+            **********************************/          
+           
+            /* {String.match()} */
+            var pattern = /a/;
+            var str = 'abcde';
+            console.log(str.match(pattern)); // 결과: ['a', index: 0, input: 'abcde', groups: undefined]
+
+            var pattern = /a./;
+            var str = 'abcde';
+            console.log(str.match(pattern)); // 결과: ['ab', index: 0, input: 'abcde', groups: undefined]
+            
+            var pattern = /.a/;
+            var str = 'abcde';
+            console.log(str.match(pattern)); // 결과: null
+
+            /* {String.replace()} */
+            var pattern = /a/;
+            var str = 'abcde';
+            console.log(str.replace(pattern, 'A')); // 결과: Abcde
+            console.log(typeof(str.replace(pattern, 'A'))); // 결과: string
+
+        </script>
+        
+    </body>
+</html>
