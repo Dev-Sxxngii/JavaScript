@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>정규 표현식 Chapter 02</title>
+    </head>
+    <body>
+
+        <!-- 자바스크립트 공간-->
+        <script type="text/javascript">
+
+            {/* 정규 표현식 */}
+            /**********************************
+             * 정규 표현식 기능: 패턴 정보 추출, 패턴 검색, 패턴 치환
+             * exec: 정규 표현식이 통해 결과를 배열로 반환하는 함수 (배열, null)
+             * test: 정규 표현식을 통해 결과를 boolean 값으로 반환하는 함수 (true, false)
+             * '.': 문자를 뜻한다.
+            **********************************/          
+           
+            /* {RegExp.exec()} */
+            var pattern = /a/;
+            console.log(pattern.exec('abcde')); // 결과: ['a', index: 0, input: 'abcde', groups: undefined]
+
+            var pattern = /a./;
+            console.log(pattern.exec('abcde')); // 결과: ['ab', index: 0, input: 'abcde', groups: undefined] | a를 기준으로 위치를 잡는거겠지? 
+
+            var pattern = /.b/;
+            console.log(pattern.exec('abcde')); // 결과: ['ab', index: 0, input: 'abcde', groups: undefined] | 처음 포함되는 위치를 기준으로 하는건가!?
+
+            var pattern = /.c./;
+            console.log(pattern.exec('abcde')); // 결과: ['bcd', index: 1, input: 'abcde', groups: undefined] | 처름 포함되는 문자 위치를 기준으로 인덱스 번호를 알려주는거 정답인거같다!
+
+            var pattern = /.a/;
+            console.log(pattern.exec('abcde')); // 결과: null
+
+            /* {RegExp.test} */
+            var pattern = /a/;
+            console.log(pattern.test('abcde')); // 결과: true
+
+            var pattern = /.a/;
+            console.log(pattern.test('abcde')); // 결과: false
+
+        </script>
+        
+    </body>
+</html>
