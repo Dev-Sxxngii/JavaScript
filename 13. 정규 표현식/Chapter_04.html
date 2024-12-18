@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>정규 표현식 Chapter 03</title>
+        <title>정규 표현식 Chapter 04</title>
     </head>
     <body>
 
@@ -32,6 +32,14 @@
             var str = 'abcde';
             console.log(str.replace(pattern, 'A')); // 결과: Abcde
             console.log(typeof(str.replace(pattern, 'A'))); // 결과: string
+
+            var pattern = /.a/;
+            var str = 'abcde';
+            console.log(str.replace(pattern, 'A')); // 결과: abcde
+
+            var pattern = /.a/;
+            var str = 'abcde';
+            console.log(str.replace(pattern, 'ABD')); // 결과: abcde
 
         </script>
         

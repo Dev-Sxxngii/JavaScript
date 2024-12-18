@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>정규 표현식 Chapter 05</title>
+    </head>
+    <body>
+
+        <!-- 자바스크립트 공간-->
+        <script type="text/javascript">
+
+            {/* 정규 표현식 */}
+            /**********************************
+             * i: /패턴/i가 붙으면 대소문자를 구별하지 않고 배열로 반환하는 함수이다. (배열, null)
+             * g: /패턴/g가 붙으면 패턴에 적용되는 문자 수를 배열로 반환하는 함수이다. (배열, null)
+            **********************************/          
+           
+            /* {i} */
+            var xi = /a/;
+            console.log('Abcde'.match(xi)); // 결과: null
+
+            var oi = /a/i;
+            console.log('Abcde'.match(oi)); // 결과: ['A', index: 0, input: 'Abcde', groups: undefined]
+
+            /* {g} */
+            var xg = /a/;
+            console.log('abcdea'.match(xg)); // 결과: ['a', index: 0, input: 'abcdea', groups: undefined] | 다수의 a 사용에도 하나의 a만 검출
+
+            var og = /a/g;
+            console.log('abcdea'.match(og)); // 결과: (2) ['a', 'a']
+            console.log(typeof('abcdea'.match(og))); // 결과: object
+
+            var ng = /a/g;
+            console.log('bcd'.match(ng)); // 결과: null
+
+            /* {ig} */
+
+            var oig = /a/ig;
+            var str = "AbcdefgfedcbA";
+            console.log(str.match(oig)); // 결과: (2) ['A', 'A']
+
+            var xig = /z/ig;
+            var str = "AbcdefgfedcbA";
+            console.log(str.match(xig)); // 결과: null
+
+        </script>
+        
+    </body>
+</html>
