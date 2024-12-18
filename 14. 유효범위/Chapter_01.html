@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>유효범위 Chapter 01</title>
+    </head>
+    <body>
+
+        <!-- 자바스크립트 공간-->
+        <script type="text/javascript">
+
+            {/* 유효범위(Scope) */}
+            /**********************************
+             * 전역 변수: 어떤 변수 영역 내에도 접근 가능한 변수
+             * 지역 변수: 지역 내에서 접근 가능한 변수
+             * var: 새로운 변수를 생성하는 코드
+            **********************************/            
+
+            /* {전역변수} */
+            // var vscope = 'global'; // 전역 변수
+            // function global() {
+            //     alert(vscope);
+            // }
+            // global(); // 결과: global
+            
+            /* {지역변수} */
+            // var vscope = 'global'; // 전역 변수
+            // function local() {
+            //     var vscope = 'local'; // 지역 변수
+            //     alert(vscope);
+            // }
+            // local(); // 결과: local
+
+            /* {잘못된 사용} */
+            // var vscopr = 'global' // 전역 변수
+            // function local() {
+            //     var vscope = 'local'; // 지역 변수
+            //     var ilu = 'i love u'; // 지역 변수
+            //     alert(ilu);
+            // }
+            // local();
+            // console.log(ilu); // 오류메세지: is not defiend
+
+            /* {var} */
+            // var vscope = 'global'; // 전역 변수
+            // function fscope() {
+            //     var vscope = 'local'; // 지역 변수
+            // }
+            // fscope();
+            // alert(vscope); // 결과: global
+
+            // var vscope = 'global'; // 전역 변수
+            // function fscope() {
+            //     vscope = 'local'; // 전역 변수
+            // }
+            // fscope();
+            // alert(vscope); // 결과: local
+
+            // var vscope = 'global'; // 전역 변수
+            // function fscope() {
+            //     var vscope = 'local'; // 지역 변수
+            //     vscope = 'local'; // 지역 변수
+            // }
+            // fscope();
+            // alert(vscope) // 결과: global
+
+        </script>
+        
+    </body>
+</html>
