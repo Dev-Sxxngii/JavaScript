@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>유효범위 Chapter 03</title>
+    </head>
+    <body>
+
+        <!-- 자바스크립트 공간-->
+        <script type="text/javascript">
+
+            {/* 유효범위(Scope) */}
+            /**********************************
+             * 자바스크립트: 함수 내에서 선언된 변수만이 지역 변수가 됨
+            **********************************/            
+
+            /* {자바스크립트} */
+            for(var i = 0; i < 1; i++) { // 전역 변수
+                var name = '상이'; // 전역변수
+            }
+            alert(name); // 결과: 상이
+
+            /* {C} */
+            // #include <stdio.h>
+            // int main() {
+            //     for(int i = 0; i < 10; i++) { // 지역 변수
+            //         printf("%d", i);
+            //     }
+            //     printf("%d", i);
+            //     return 0;
+            // }
+            
+        </script>
+        
+    </body>
+</html>
