@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>유효범위 Chapter 05</title>
+    </head>
+    <body>
+
+        <!-- 자바스크립트 공간-->
+        <script type="text/javascript">
+
+            {/* 유효범위(Scope) */}
+            /**********************************
+             * 정적 유효범위: 코드 실행시가 아닌 코드가 정의될 때 기준으로 유효범위가 결정된다.
+            **********************************/            
+
+            /* {정적 유효범위 1} */
+            // var i = 5; // 전역 변수
+            
+            // function a() { // 전역 변수
+            //     var i = 10; // 지역 변수
+            //     b();
+            // }
+            // function b() { // 전역 변수
+            //     document.write(i); // 결과: 10
+            // }
+
+            // a();
+
+            /* {정적 유효범위 2} */
+            // var i = 5;
+
+            // function a() {
+            //     b();
+            // }
+
+            // function b() {
+            //     var i = 10;
+            //     document.write(i);
+            // }
+
+            // a();
+
+        </script>
+        
+    </body>
+</html>
