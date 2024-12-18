@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>정규 표현식 Chapter 06</title>
+    </head>
+    <body>
+
+        <!-- 자바스크립트 공간-->
+        <script type="text/javascript">
+
+            {/* 정규 표현식 */}
+            /**********************************
+             * 캡쳐: 그룹을 지정해서 그룹의 값을 사용하는 기술이다.
+             * (): 그룹을 의미한다.
+             * \w: 문자를 의미한다. | 문자: A~Z a~z 0~9
+             * +: 조건을 의미한다. | 위의 정규 표현식 기준 \w에 해당하는 문자가 1글자 이상이 존재하면 유효하다.
+             * \s: 공백을 의미한다.
+             * $: 그룹을 의미한다.
+            **********************************/          
+           
+            /* {w, +, s, $} */
+            var pattern = /(\w+)\s(\w+)/;
+            var str = 'ab cd';
+            var result = str.replace(pattern, 'cd ab');
+            console.log(result); // 결과: cd ab
+
+            var pattern = /(\w+)\s(\w+)/;
+            var str = 'abcd';
+            var result = str.replace(pattern, 'cd ab');
+            console.log(result) // 결과: abcd
+
+            var pattern = /(\w+)\s(\w+)/;
+            var str = 'ab cd';
+            var result = str.replace(pattern, 'cdab');
+            console.log(result); // 결과: cdab
+
+            var pattern = /(\w+)\s(\w+)/;
+            var str = 'coding everybody';
+            var result = str.replace(pattern, "$2, $1");
+            console.log(result); // 결과: everybody, coding
+
+            var pattern = /(\w+)\s(\w+)/;
+            var str = 'coding everybody';
+            var result = str.replace(pattern, "$2 $1");
+            console.log(result); // 결과: everybody coding
+            
+        </script>
+        
+    </body>
+</html>
