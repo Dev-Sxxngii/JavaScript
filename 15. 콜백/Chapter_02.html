@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>콜백 Chapter 02</title>
+    </head>
+    <body>
+
+        <!-- 자바스크립트 공간-->
+        <script type="text/javascript">
+
+            {/* 콜백 */}
+            /**********************************
+             * first-class-object: 변수 또는 매개변수 또는 리턴값으로 사용될 수 있는 값(js: 함수)
+            **********************************/            
+
+            /* {함수} */
+            function cal(mode) {
+                var funcs = {
+                    'plus' : function(left, right) {return left + right},
+                    'minus' : function(left, right) {return left - right}
+                };
+                return funcs[mode] // 객체 내부 요소 접근 방식은 '.'과 []이 있는데 왜 []만 가능하지?
+            }
+
+            console.log(cal('plus')(1, 2)); // 결과: 3
+            console.log(cal('minus')(1, 2)); // 결과: -1
+
+            /* {작동방식} */ // 못참고 어떻게 하는지 봐버렸다..ㅠㅠ(반성&후회)
+            // 1. cal(mode): mode 값으로 'plus' 또는 'minus'를 넘긴다.
+            // 2. return funcs[mode]: mode값이 들어간다. | 객체 내부 요소 접근 방식이다.
+            // 3. var funcs = {};: 해당하는 정의된 funcs를 실행하여 값을 반환하다.
+
+            /* {값을 불러오기 위한 흔적들...} */
+            // var funcs = {'i':100};
+
+            // console.log(funcs.i)
+
+            // var funcs = {'a':function() {return 10;}}
+
+            // console.log(funcs.a())
+
+            // var funcs = {'a':function(num1, num2) {return num1+num2;}}
+
+            // console.log(funcs.a(1, 2))
+
+            var process = [
+                function(input) {return input + 10},
+                function(input) {return input * input;},
+                function(input) {return input / 2;}
+            ];
+
+            var input = 1;
+            for(var i = 0; i < process.length; i++) {
+                input = process[i](input);
+            }
+
+            console.log(input); // 결과: 60.5
+
+            /* {작동방식} */ // 영상 안 보고 풀긴 했지만 너무 급하게해서 처음에 틀렸다..ㅠㅠ
+            // input = 1 | i = 0 | process[0](1) | 1 + 10 = 11;
+            // input = 11 | i = 1 | process[1](11) | 11 * 11 = 121;
+            // input = 121 | i = 2 | process[2](121) | 121 / 2 = 60.5;
+
+        </script>
+        
+    </body>
+</html>
