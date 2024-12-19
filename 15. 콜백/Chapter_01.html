@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>콜백 Chapter 01</title>
+    </head>
+    <body>
+
+        <!-- 자바스크립트 공간-->
+        <script type="text/javascript">
+
+            {/* 콜백 */}
+            /**********************************
+             * 함수: 함수는 값이다. | 인자 전달이 가능하다.
+             * 속성(Property): 객체 내부에서 변수의 역할을 하는 것
+             * 메소드(method): 객체의 속성 값으로 담겨진 함수
+            **********************************/            
+
+            /* {함수 1} */
+            // function a() {}; // 함수
+
+            /* {함수 2} */
+            // var a = function() {}; // 위와 동일한 함수
+
+            /* {메소드} */ 
+            // a = {
+            //     b:function name() { 
+            //         alert("hello world!");
+            //     } // 메소드
+            // };
+
+            // a.b();
+
+            /* {인자 전달} */
+            function cal(func, num) { // func: function
+                return func(num); // 함수 호출
+            };
+
+            function increase(num) {
+                return num + 1;
+            };
+
+            function decrease(num) {
+                return num - 1;
+            };
+
+            console.log(cal(increase, 1)); // 결과: 2
+            console.log(cal(decrease, 1)); // 결과: 0
+
+        </script>
+        
+    </body>
+</html>
