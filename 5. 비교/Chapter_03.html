@@ -24,7 +24,7 @@
             console.log(b); // 결과: null
 
             console.log(undefined == null) // 결과: true
-            console.log(undefined === null) // 결과: false | 의도의 차이 때문에 
+            console.log(undefined === null) // 결과: false | 자료형의 차이 때문에 오류 발생
             console.log(typeof(undefined)); // 결과: undefined
             console.log(typeof(null)); // 결과: null
 
@@ -44,8 +44,8 @@
             console.log(a == b); // 결과: true
             console.log(a === b); // 결과: true
 
-            console.log(NaN == NaN); // 결과: fasle | NaN과 NaN이 다른 이유가 뭐지?
-            console.log(NaN === NaN); // 결과: fasle
+            console.log(NaN == NaN); // 결과: false | javascript 설계 오류
+            console.log(NaN === NaN); // 결과: false
             console.log(0/0); // 결과: NaN
             console.log((0/0) == (0/0)); // 결과: false
             console.log(typeof(NaN)); // 결과: number

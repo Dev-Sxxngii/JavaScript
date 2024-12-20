@@ -49,24 +49,45 @@
             //     document.write(sum()); // 결과: 30
             // }())
 
-            // function MYAPP() { // 전역 변수
-            //     var MYAPP = {} // MYAPP 함수 속 지역 변수
-            //     MYAPP.calculator = { // MYAPP 속 지역 변수 
-            //         'left' : null, // MYAPP.calculator 속 지역 변수 | 초기화
-            //         'right' : null // MYAPP.calculator 속 지역 변수 | 초기화
+            function MYAPP() { // 함수 | 전역변수
+                var MYAPP = {} // 지역변수(자료형: 객체)
+                MYAPP.calculator = {  // 속성()
+                    'left' : null, 
+                    'right' : null 
+                }
+                MYAPP.coordinate = { 
+                    'left' : null, 
+                    'right' : null 
+                }
+                MYAPP.calculator.left = 10;
+                MYAPP.calculator.right = 20;
+                function sum() {
+                    return MYAPP.calculator.left + MYAPP.calculator.right;
+                }
+                document.write(sum()); // 결과: 30
+            }
+            MYAPP();
+
+            // function MYAPP() {
+            //     var MYAPP = {}
+            //     calculator = {
+            //         'left' : null,
+            //         'right' : null,
             //     }
-            //     MYAPP.coordinate = { // MYAPP 속 지역 변수
-            //         'left' : null, // MYAPP.calculator 속 지역 변수 | 초기화
-            //         'rigth' : null // MYAPP.calculator 속 지역 변수 | 초기화
+            //     coordinate = {
+            //         'left' : null,
+            //         'right' : null
             //     }
-            //     MYAPP.calculator.left = 10;
-            //     MYAPP.calculator.right = 20;
+            //     calculator.left = 10;
+            //     coordinate.right = 20;
             //     function sum() {
-            //         return MYAPP.calculator.left + MYAPP.calculator.right;
+            //         return calculator.left + coordinate.right;
             //     }
-            //     document.write(sum()); // 결과: 30
+            //     document.write(sum());
             // }
             // MYAPP();
+
+            // MYAPP 함수 안에 MYAPP 객체를 생성하고 또 calculator, coordinate 객체를 생성해서 따로 따로 진행하는거고
 
         </script>
         
