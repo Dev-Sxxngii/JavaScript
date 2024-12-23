@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>클로저 Chapter 02</title>
+    </head>
+    <body>
+
+        <!-- 자바스크립트 공간-->
+        <script type="text/javascript">
+
+            {/* 클로저 */}
+            /**********************************
+             * 특징: 외부 함수가 소멸된 이후에도 접근이 가능하다.
+            **********************************/            
+
+            /* {클로저} */
+            function outer() {
+                var title = 'coding everybody';
+                return function() {
+                    console.log(title);
+                }
+            }
+            var inner = outer();
+            inner(); // 결과: coding everybody
+            
+
+        </script>
+        
+    </body>
+</html>
