@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>클로저 Chapter 03</title>
+    </head>
+    <body>
+
+        <!-- 자바스크립트 공간-->
+        <script type="text/javascript">
+
+            {/* 클로저 */}
+            /**********************************
+             * private variable: 어떠한 정보를 아무나 수정하도록 하는 것을 방지
+            **********************************/            
+
+            /* {클로저} */
+            function factory_movie(title) {
+                return {
+                    get_title : function() {
+                        return title;
+                    },
+                    set_title : function(_title) {
+                        title = _title;
+                    }
+                }
+            }
+            ghost = factory_movie('Ghost in the shell');
+            matrix = factory_movie('Matrix');
+
+            console.log(ghost.get_title()); // 결과: Ghost in the shell
+            console.log(matrix.get_title()); // 결과: Matrix
+
+            ghost.set_title('공각기동대');
+            // matrix.set_title('매트릭스');
+            // console.log(ghost.set_title('안녕')) 은 왜 불가능한지 | 아 반환값이 없으니깐 변경은 되더라도 set_title 자체는 변경을 시키는거지 반환을 하는게 아니니 undefiend가 뜨느거지
+            
+            console.log(ghost.get_title(ghost.set_title('상이'))); // 합본
+            // console.log(ghost.get_title()); // 결과: 공각기동대
+            // console.log(matrix.get_title()); // 결과: 매트릭스
+
+            // 객체를 리턴 함
+            // 속성과 메소드를 보유함(2개)
+            // 객체 내부에 함수가 포함된 구조
+            // 메소드들은 내부 함수 외부 함수(factory_movie) 함수에 대한 내부 함수이지만 객체의 소속인 점만 다르다)
+            // 내부 함수의 내포하는 생성하는 외부 함수의 지역 변수에 접근할 수 있다.
+            // title이란 값은 외부 함수의 매개변수에 온다.
+            // 리턴하는 타이틀은 외부 함수의 매개변수에서 온다.
+            // 외부 함수의 첫 번째 매개변수는 타이틀이다.
+            // 매개변수는 함수 안에서 지역 변수로 사용된다.
+            // 타이틀은 지역 변수이고 지역 변수는 내부 함수에서 접근이 가능하다.
+            // 정리: factory_movie(매개변수)를 실행하면 매개 변수 값은 내부 함수의 지역 변수 값으로 사용되며 반환된다.
+
+            // _타이틀은 타이틀의 대입되는 값이 되고 이는 즉 _title은 _title이고 title은 _title이 된다.
+            // title은 외부 함수의 매개변수 title과 같고 이는 즉, 전달 받은 매개변수 값을 변경한다.
+
+            // ghost와 matrix에는 각 각 객체가 return 된다.
+            // ghost와 matrix는 각 각 메소드 접근 시 내부 값은 다르다.
+
+            // 지역변수 title은 외부 함수가 return 했을 때 외부함수의 지역 변수인 title은 내부 함수인 get_title \ set_title을 통해서만 접근이 가능한 변수가 된다.
+            // 타이블에 접근 가능한 것은 get_title \ set_title을 통해서만 접근/변경 이 가능해 아무나 접근할 수 없다. 
+            // title이란 변수 값을 외부에서 사용해도 내부 코드(맥락)에 영향을 끼치지 않는다.
+
+        </script>
+        
+    </body>
+</html>
