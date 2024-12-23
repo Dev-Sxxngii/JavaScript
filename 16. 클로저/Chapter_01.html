@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>클로저 Chapter 01</title>
+    </head>
+    <body>
+
+        <!-- 자바스크립트 공간-->
+        <script type="text/javascript">
+
+            {/* 콜백 */}
+            /**********************************
+             * 클로저: 내부 함수가 외부함수의 맥락(context)에 접근하는 개념
+            **********************************/            
+
+            /* {외부/내부 함수} */
+            function outer() { // 외부 함수
+                function inner() { // 내부 함수
+                    var title = 'coding everybody';
+                    console.log(title);
+                }
+                inner(); // 결과: coding everybody
+            }
+            outer();
+
+            /* {클로저} */
+            function outer() { // 외부 함수
+                var title = 'coding everybody'; // 지역 변수(outter)
+                var inner = function() { // 내부 함수
+                    console.log(title); // 결과: coding everybody
+                }
+                inner();
+            }
+            outer();
+
+        </script>
+        
+    </body>
+</html>
