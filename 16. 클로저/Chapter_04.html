@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>클로저 Chapter 04</title>
+    </head>
+    <body>
+
+        <!-- 자바스크립트 공간-->
+        <script type="text/javascript">
+
+            {/* 클로저 */}
+            /**********************************
+             * private variable: 어떠한 정보를 아무나 수정하도록 하는 것을 방지
+            **********************************/            
+
+            /* {잘못된 클로저 사용} */
+            var arr = []
+            
+            for(var i = 0; i < 5; i++){ 
+                arr[i] = function(){
+                    return i;
+                }
+            }
+
+            for(var index in arr) {
+                console.log(arr[index]());
+            }
+
+            /* {올바른 클로저 사용} */
+            var arr = []
+
+            for(var i = 0; i < 5; i++) {
+                arr[i] = function(id) {
+                    return function() {
+                        return id;
+                    }
+                }(i);
+            }
+
+            for(var index in arr) {
+                console.log(arr[index]());
+            }
+
+        </script>
+        
+    </body>
+</html>
