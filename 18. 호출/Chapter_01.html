@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>호출 Chapter 01</title>
+    </head>
+    <body>
+
+        <!-- 자바스크립트 공간-->
+        <script type="text/javascript">
+
+            {/* 호출(apply) */}
+            /**********************************
+             * object: 프로퍼티(속성)와 메서드(함수)로 이루어진 데이터 구조이다.
+             * 함수: 함수는 객체로 정의된 특별한 타입이며, 프로퍼티와 메소드를 담을 수 있기 때문에 객체이다. 이러한 특성 덕분에 콜백 기능을 사용할 수 있습니다.
+            **********************************/            
+
+            /* {apply} */
+
+            // 함수명.apply(this가 될 객체, [인자]);
+
+            // function func() {
+            // }
+            // func()
+
+            // function sum(arg1, arg2) {
+            //     return arg1 + arg2;
+            // }
+            // console.log(sum.apply(null, [1, 2]))
+
+            function Constraints() {
+                
+                var result = 0;
+                
+                for(var i = 0; i < arguments.length; i++) {
+                    result += arguments[i];
+                }
+                
+                if(result > 0) {
+                    return 1;
+                } else if(result <= 0) {
+                    return 0;
+
+                }
+
+            }
+            
+            function sum(arg1, arg2) {
+                Constraints(1, 2);
+            }
+
+            console.log(sum.apply(Constraints, [3, 10]));
+
+            // let person = {
+            //     name: "Alice",
+            //     greet: function(age) {
+            //         console.log(`${this.name} is ${age} years old.`);
+            //     }
+            // };
+
+            // let anotherPerson = { name: "Bob" };
+
+            // person.greet.apply(anotherPerson, [30]);  // "Bob is 30 years old."
+
+        </script>
+        
+    </body>
+</html>
