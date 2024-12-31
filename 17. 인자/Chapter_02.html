@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>유사 배열 Chapter 02</title>
+    </head>
+    <body>
+
+        <!-- 자바스크립트 공간-->
+        <script type="text/javascript">
+
+            {/* 유사 배열(Argument) */}
+            /**********************************
+             * 함수명.length: 함수의 매개변수 개수를 출력한다.
+             * arguments.length: 전달된 인자의 개수를 출력한다.
+            **********************************/            
+
+            /* {인자} */
+            function zero() {
+                document.write(
+                    'zero' + '<br />',
+                    'zero.length: ', zero.length + '<br />',
+                    'arguments: ', arguments.length + '<br />' + '<br />'
+                );
+            }
+            zero();
+
+            function one(arg1) {
+                document.write(
+                    'one' + '<br />',
+                    'one.length: ', one.length + '<br />',
+                    'arguments: ', arguments.length + '<br />' + '<br />'
+                );
+            }
+            one('val1', 'val2');
+
+            function two(arg1, arg2) {
+                document.write(
+                    'two' + '<br />',
+                    'two.length: ', two.length + '<br />',
+                    'arguments: ', arguments.length + '<br />' + '<br />'
+                );
+            }
+            two('val1');
+
+        </script>
+        
+    </body>
+</html>
