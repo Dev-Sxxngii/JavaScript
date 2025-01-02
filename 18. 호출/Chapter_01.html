@@ -18,37 +18,14 @@
 
             // 함수명.apply(this가 될 객체, [인자]);
 
-            // function func() {
-            // }
-            // func()
-
-            // function sum(arg1, arg2) {
-            //     return arg1 + arg2;
-            // }
-            // console.log(sum.apply(null, [1, 2]))
-
-            function Constraints() {
-                
-                var result = 0;
-                
-                for(var i = 0; i < arguments.length; i++) {
-                    result += arguments[i];
-                }
-                
-                if(result > 0) {
-                    return 1;
-                } else if(result <= 0) {
-                    return 0;
-
-                }
-
+            function func() {
             }
-            
+            func()
+
             function sum(arg1, arg2) {
-                Constraints(1, 2);
+                return arg1 + arg2;
             }
-
-            console.log(sum.apply(Constraints, [3, 10]));
+            console.log(sum.apply(null, [1, 2]))
 
             // let person = {
             //     name: "Alice",

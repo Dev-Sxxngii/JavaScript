@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>호출 Chapter 02</title>
+    </head>
+    <body>
+
+        <!-- 자바스크립트 공간-->
+        <script type="text/javascript">
+
+            {/* 호출(apply) */}
+            /**********************************
+             * 
+            **********************************/            
+
+            /* {apply} */
+            o1 = {va1:1, val2:2, val3:3};
+            o2 = {v1: 10, v2: 50, v3:100, v4:25};
+
+            function sum() {
+                var _sum = 0;
+                for(var name in this) {
+                    _sum += this[name];
+                }
+                return _sum;
+            }
+            document.write('sum(o1): ' + sum.apply(o1) + '<br />');
+            document.write('sum(o2): ' +sum.apply(o2) + '<br />');
+            
+        </script>
+        
+    </body>
+</html>
