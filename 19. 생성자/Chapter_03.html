@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>생성자 Chapter 03</title>
+    </head>
+    <body>
+
+        <!-- 자바스크립트 공간-->
+        <script type="text/javascript">
+
+            {/* 생성자 */}
+            /**********************************
+             * new: 객체의 생성자이다.
+            **********************************/            
+
+            // function person() {}
+            // var p = new person();
+            // p.name = '상이'
+            // p.age = '30'
+            // p.introduce = function() {
+            //     return `${this.name} is ${this.age} years old`
+            // }
+
+            // document.write(p.introduce());
+
+
+
+             function person(name, age) {
+                this.name = name;
+                this.age = age;
+                this.introduce = function() {
+                    return `${this.name} is ${this.age} years old`;
+                }
+             }
+
+             var p1 = new person('상이', 24);
+             console.log(p1.introduce());
+
+             var p2 = new person('상ol', 12);
+             console.log(p2.introduce());
+
+            
+        </script>
+        
+    </body>
+</html>
