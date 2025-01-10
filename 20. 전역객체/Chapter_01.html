@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>전역객체 Chapter 01</title>
+    </head>
+    <body>
+
+        <!-- 자바스크립트 공간-->
+        <script type="text/javascript">
+
+            {/* 생성자 */}
+            /**********************************
+             * 전역객체: 모든 객체는 전역객체의 프로퍼티다.
+            **********************************/            
+
+            function func() {
+                document.write('Hello?' + '<br />');
+            }
+            func();
+
+            window.func(); // window: 객체(생략 가능) / func(): 메서드
+
+
+
+            function func2() {
+                var info = {
+                    name : '상이',
+                    introduce : function() {
+                        return `my name is ${this.name}`
+                    }
+                }
+                return info;
+            }
+
+            var a = func2();
+
+            document.write(a.introduce() + '<br />');
+            document.write(window.a.introduce() + '<br />');
+
+            
+            
+            var a = []
+            
+            for(var i = 0; i < 5; i++) {
+                a[i] = i;
+            }
+
+            document.write(a + '<br />');
+            document.write(window.a + '<br />');
+
+
+
+            var a = 10;
+            document.write(a + '<br />');
+            document.write(window.a + '<br />');
+            
+        </script>
+        
+    </body>
+</html>
