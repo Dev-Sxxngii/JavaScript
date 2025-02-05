@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>this Chapter 04</title>
+    </head>
+    <body>
+
+        <!-- 자바스크립트 공간-->
+        <script type="text/javascript">
+
+            {/* this */}
+            /**********************************
+             * 
+            **********************************/            
+
+            var o = {}
+            var p = {}
+
+            function func() {
+                switch(this) {
+                    case o:
+                        document.write('o <br />');
+                        break;
+                    case p:
+                        document.write('p <br />');
+                        break;
+                    case window:
+                        document.write('window <br />');
+                        break
+                }
+            }
+
+            func();
+            func.apply(o);
+            func.apply(p);
+
+            
+
+            function sum(x, y) {
+                return x + y;
+            }
+            var a = new sum(1, 2);
+            console.log(a);
+
+
+
+            var b = new Function('x', 'y', 'return x + y;');
+            console.log(b(1, 2));
+            console.log(typeof(b));
+
+
+
+            function sum2(x, y) {
+                return {result : x + y};
+            }
+            var c = new sum2(1, 2);
+            console.log(c.result);
+
+
+
+            function sum3(x, y) {
+                return this.result = x + y;
+            }
+            var d = new sum3(1, 2);
+            console.log(d.result)
+
+            
+
+
+        </script>
+        
+    </body>
+</html>

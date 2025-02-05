@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>this Chapter 01</title>
+    </head>
+    <body>
+
+        <!-- 자바스크립트 공간-->
+        <script type="text/javascript">
+
+            {/* this */}
+            /**********************************
+             * 
+            **********************************/            
+
+            function func() {
+                if(window ===  this) {
+                    document.write('window == this' );
+                }
+            }
+
+            func();
+
+            window.func();
+            
+        </script>
+        
+    </body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>this Chapter 03</title>
+    </head>
+    <body>
+
+        <!-- 자바스크립트 공간-->
+        <script type="text/javascript">
+
+            {/* this */}
+            /**********************************
+             * 
+            **********************************/            
+
+            var funcThis = null;
+
+            function Func() {
+                return funcThis = this;
+            }
+
+            var o1 = Func();
+            if(funcThis === window) {
+                document.write('window <br />');
+            }
+
+            var o2 = new Func();
+            if(funcThis === o2) {
+                document.write('o2 <br />');
+            }
+
+
+            var funcThis2 = null;
+
+            function Func2() {
+                return funcThis2 = this;
+            }
+
+            var o1 = Func2();
+            console.log(o1);    
+
+            var o2 = new Func2();
+            console.log(o2);
+
+            console.log(this);
+
+        </script>
+        
+    </body>
+</html>
